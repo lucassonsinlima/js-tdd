@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*js",
+    "prepush": "nrm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/lucassonsinlima/js-tdd/issues"
   },
-  "homepage": "https://github.com/lucassonsinlima/js-tdd#readme"
+  "homepage": "https://github.com/lucassonsinlima/js-tdd#readme",
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "husky": "^2.1.0"
+  }
 }
