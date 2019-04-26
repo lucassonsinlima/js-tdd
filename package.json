@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*js",
-    "prepush": "nrm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -29,5 +28,10 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-vue": "^5.2.2",
     "husky": "^2.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
   }
 }
